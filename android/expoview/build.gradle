@@ -167,6 +167,7 @@ dependencies {
   compileOnly 'host.exp.exponent:expo-background-fetch:1.0.0'
   compileOnly 'host.exp.exponent:expo-mail-composer:1.0.0'
   compileOnly 'host.exp.exponent:expo-sqlite:1.0.0'
+  compileOnly 'host.exp.exponent:expo-haptics:1.0.0'
   END UNCOMMENT WHEN DISTRIBUTING */
 
   // WHEN_DISTRIBUTING_REMOVE_FROM_HERE
@@ -209,6 +210,8 @@ dependencies {
   api project(':expo-gl')
   api project(':expo-gl-cpp')
   api project(':expo-google-sign-in')
+  api project(':expo-haptics')
+  api project(':expo-face-detector')
   api project(':expo-image-loader-interface')
   api project(':expo-keep-awake')
   api project(':expo-linear-gradient')

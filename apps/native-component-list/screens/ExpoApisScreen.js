@@ -107,7 +107,7 @@ export default class ExpoApisScreen extends React.Component {
         'Geocoding',
         'Google',
         'GoogleSignIn',
-        'Haptic',
+        'Haptics',
         'ImagePicker',
         'ImageManipulator',
         'IntentLauncher',

@@ -1,5 +1,4 @@
-import { UnavailabilityError } from 'expo-errors';
-import ExponentHaptic from './ExponentHaptic';
+import ExpoHaptics from './ExpoHaptics';
 
 /**
  * Notification Feedback Type
@@ -41,35 +40,38 @@ export enum ImpactFeedbackStyle {
   Heavy = 'heavy',
 }
 
+export function notification(type: NotificationFeedbackType = NotificationFeedbackType.Success): Promise<null> {
+  console.warn('Haptics.notification is deprecated. Use Haptics.notificationAsync instead.');
+  return notificationAsync(type);
+}
+
+export function impact(style: ImpactFeedbackStyle = ImpactFeedbackStyle.Medium): Promise<null> {
+  console.warn('Haptics.impact is deprecated. Use Haptics.impactAsync instead.');
+  return impactAsync(style);
+}
+
+export function selection(): Promise<null> {
+  console.warn('Haptics.selection is deprecated. Use Haptics.selectionAsync instead.');
+  return selectionAsync();
+}
+
 /**
  * Triggers notification feedback.
  */
-export function notification(type: NotificationFeedbackType = NotificationFeedbackType.Success) {
-  if (!ExponentHaptic || ExponentHaptic.notification) {
-    throw new UnavailabilityError('Haptic', 'notification');
-  }
-
-  return ExponentHaptic.notification(type);
+export async function notificationAsync(type: NotificationFeedbackType = NotificationFeedbackType.Success): Promise<null> {
+  return ExpoHaptics.notificationAsync(type);
 }
 
 /**
  * Triggers impact feedback.
  */
-export function impact(style: ImpactFeedbackStyle = ImpactFeedbackStyle.Medium) {
-  if (!ExponentHaptic || !ExponentHaptic.impact) {
-    throw new UnavailabilityError('Haptic', 'impact');
-  }
-
-  return ExponentHaptic.impact(style);
+export async function impactAsync(style: ImpactFeedbackStyle = ImpactFeedbackStyle.Medium): Promise<null> {
+  return ExpoHaptics.impactAsync(style);
 }
 
 /**
  * Triggers selection feedback.
  */
-export function selection() {
-  if (!ExponentHaptic || !ExponentHaptic.selection) {
-    throw new UnavailabilityError('Haptic', 'selection');
-  }
-
-  return ExponentHaptic.selection();
+export async function selectionAsync(): Promise<null> {
+  return ExpoHaptics.selectionAsync();
 }

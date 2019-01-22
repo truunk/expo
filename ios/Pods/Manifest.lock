@@ -407,6 +407,8 @@ PODS:
   - EXGoogleSignIn (2.0.0):
     - EXCore
     - GoogleSignIn (~> 4.4)
+  - EXHaptics (1.0.0):
+    - EXCore
   - EXImageLoaderInterface (2.0.0):
     - EXCore
   - EXKeepAwake (1.0.0):
@@ -1305,6 +1307,7 @@ DEPENDENCIES:
   - EXGL (from `../packages/expo-gl/ios`)
   - EXGL-CPP (from `../packages/expo-gl-cpp/cpp`)
   - EXGoogleSignIn (from `../packages/expo-google-sign-in/ios`)
+  - EXHaptics (from `../packages/expo-haptics/ios`)
   - EXImageLoaderInterface (from `../packages/expo-image-loader-interface/ios`)
   - EXKeepAwake (from `../packages/expo-keep-awake/ios`)
   - EXLinearGradient (from `../packages/expo-linear-gradient/ios`)
@@ -1767,6 +1770,8 @@ EXTERNAL SOURCES:
     :path: "../packages/expo-gl-cpp/cpp"
   EXGoogleSignIn:
     :path: "../packages/expo-google-sign-in/ios"
+  EXHaptics:
+    :path: "../packages/expo-haptics/ios"
   EXImageLoaderInterface:
     :path: "../packages/expo-image-loader-interface/ios"
   EXKeepAwake:
@@ -1991,6 +1996,7 @@ SPEC CHECKSUMS:
   EXGL: 9a5dd454a7ed9660b25b71d82d8009ac9bd6f85a
   EXGL-CPP: 46b589a3ed0c59ae2e7f9434897b66cd8dd2e70c
   EXGoogleSignIn: 646a6097f0e6ca5c4812b5dc2fcda1979ad9d333
+  EXHaptics: fd08f1e2a9d7722f031f6da4036aad1a57ad37c9
   EXImageLoaderInterface: 3f460f6ff344ba6c4e00621806c0d1d76249cd8f
   EXKeepAwake: f8d01da0507d5921135ba63799c98ac4e059ff36
   EXLinearGradient: b09d4e1478b72b08a39f902a1ec045772e3a59e3
@@ -2049,6 +2055,6 @@ SPEC CHECKSUMS:
   yogaABI31_0_0: 7978689ddccec43cffd5914889304cf3b7fd7c77
   yogaABI32_0_0: b6e0ba3796cd5e47ccea0454694e605a1cfc817a
 
-PODFILE CHECKSUM: 83345f62f3f6616d4b2dc7021dcb7b98c825cc56
+PODFILE CHECKSUM: 1a32f0e57b8709639be23ed2e57d1d700c1c5db5
 
 COCOAPODS: 1.5.3

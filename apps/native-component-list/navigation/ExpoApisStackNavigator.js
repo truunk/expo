@@ -16,7 +16,7 @@ import Font from '../screens/FontScreen';
 import Geocoding from '../screens/GeocodingScreen';
 import Google from '../screens/GoogleScreen';
 import GoogleSignIn from '../screens/GoogleSignInScreen';
-import Haptic from '../screens/HapticScreen';
+import Haptics from '../screens/HapticsScreen';
 import ImageManipulator from '../screens/ImageManipulatorScreen';
 import ImagePicker from '../screens/ImagePickerScreen';
 import IntentLauncher from '../screens/IntentLauncherScreen';
@@ -61,7 +61,7 @@ const ExpoApisStackNavigator = createStackNavigator(
     Font,
     Google,
     GoogleSignIn,
-    Haptic,
+    Haptics,
     Calendars,
     Constants,
     Contacts,

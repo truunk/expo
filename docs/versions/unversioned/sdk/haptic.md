@@ -1,12 +1,12 @@
 ---
-title: Haptic
+title: Haptics
 ---
 
-Provides haptic feedback for iOS 10+ devices using the Taptic Engine.
+Provides haptic feedback for
+- iOS 10+ devices using the Taptic Engine
+- Android devices using Vibrator system service.
 
-> If this is used in Android the device will use `ReactNative.Vibrate` instead, it's best to just avoid this.
-
-**The Taptic engine will do nothing given the following circumstances:**
+**Note for iOS: The Taptic engine will do nothing given the following circumstances:**
 * Low Power Mode is enabled
   * [Feature Request](https://expo.canny.io/feature-requests/p/expose-low-power-mode-ios-battery-saver-android)
 * User disabled the Taptic Engine in settings
@@ -16,18 +16,20 @@ Provides haptic feedback for iOS 10+ devices using the Taptic Engine.
 * iOS version is less than 10 (iPhone 7 is the first phone to support this)
   * This could be found through: `Expo.Constants.platform.ios.systemVersion` or `Expo.Constants.platform.ios.platform`
 
+**Note for Android: haptic is simulated using Vibrator**
+
 ## API
 
-### `Haptic.selection()`
+### `Haptics.selectionAsync(): Promise<null>`
 Used to let a user know when a selection change has been registered
 
 #### Example
 
 ```js
-Haptic.selection()
+Haptics.selectionAsync()
 ```
 
-### `Haptic.notification(type: NotificationFeedbackType)`
+### `Haptics.notificationAsync(type: NotificationFeedbackType): Promise<null>`
 
 | Property |      Type                | Description                                            |
 | -------- | :----------------------: | ------------------------------------------------------ |
@@ -36,10 +38,10 @@ Haptic.selection()
 #### Example
 
 ```js
-Haptic.notification(Haptic.NotificationFeedbackType.Success)
+Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
 ```
 
-### `Haptic.impact(style: ImpactFeedbackStyle)`
+### `Haptics.impactAsync(style: ImpactFeedbackStyle): Promise<null>`
 
 | Property  |      Type           | Description                              |
 | --------- | :-----------------: | ---------------------------------------- |
@@ -48,7 +50,7 @@ Haptic.notification(Haptic.NotificationFeedbackType.Success)
 #### Example
 
 ```js
-Haptic.impact(Haptic.ImpactFeedbackStyle.Light)
+Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
 ```
 
 ---
