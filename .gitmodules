@@ -6,3 +6,8 @@
   url = git@github.com:expo/react-native.git
   branch = exp-latest
   update = checkout
+[submodule "detox-lab/Detox"]
+  path = detox-lab/Detox
+  url = https://github.com/expo/Detox
+  branch = exp-latest
+  update = checkout
