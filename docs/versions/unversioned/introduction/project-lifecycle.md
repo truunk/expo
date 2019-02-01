@@ -4,7 +4,7 @@ title: Project Lifecycle
 
 Expo makes it easy to get started writing apps and to take them all the way to production using the managed workflow. Here's an overview of the tools and services you might use along the way.
 
-This guide is meant to give a high-level explanation of what Expo offers. For the curious, the technical implementation of these topics is covered in way more detail [here](../../workflow/how-expo-works/).
+This guide is meant to give a high-level explanation of what Expo offers. For the curious, the technical implementation of these topics is covered in much more detail [here](../../workflow/how-expo-works/).
 
 <img src="/static/images/project-lifecycle-workflows.png" className="wide-image" />
 
